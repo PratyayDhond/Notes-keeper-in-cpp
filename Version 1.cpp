@@ -36,18 +36,21 @@ void createFile(){
 		fin.close();
 		int choice1;
 		do{
-			
+			system("pause");
+			system("cls");
 			cout<<"Press 1. to append to file"<<endl
 			<<"Press 2. to delete data "<<endl
 			<<"Press 3. to exit"<<endl
 			<<"Choice : ";
 			cin>>choice1;
-			system("pause");
-			system("cls");
+			
 				
 			switch(choice1){
 				case 1:
 						{
+							system("pause");
+							system("cls");
+							fflush(stdin);
 							ofstream fout;
 							fout.open(filename,ios::app);
 							string data;
@@ -60,6 +63,8 @@ void createFile(){
 						break;
 						
 				case 2:
+						system("pause");
+						system("cls");
 						{
 							ofstream fout;
 							fout.open(filename,ios::trunc);
@@ -74,7 +79,7 @@ void createFile(){
 							fout.close();
 						//	cout<<"File "<<filename<<"closed successfully"<<endl;
 							}else{
-								cout<<"No file open to be closed"<<endl;
+						//		cout<<"No file open to be closed"<<endl;
 							}	
 						}
 						
@@ -129,12 +134,15 @@ void accessFile(){
 		<<"3. Press 3 to exit"<<endl
 		<<"Choice : ";
 	cin>>choice;
-	system("pause");
-	system("cls");
+	
 	if(choice == '1'){
+		system("pause");
+		system("cls");
 		showAllDates();
 		system("cls");
 	}else if(choice == '2'){
+		system("pause");
+		system("cls");
 		bool flag;
 		string filename;
 		do{
@@ -163,10 +171,13 @@ void accessFile(){
 				cout<<line<<endl;
 				
 			}while(fin);
-		
+		system("pause");
+		system("cls");
 		if((fin.good())){
 				cout<<"Bad read, file couldn't be found."<<endl;
 				}
+			}else if(choice == '3'){
+				
 			}else{
 		cout<<"Enter a valid choice : "<<endl;
 		system("pause");
@@ -200,20 +211,22 @@ int main(){
 			<<"Choice : ";
 			fflush(stdin);
 		cin>>choice;
-			system("pause");
-			system("cls");	
+				
 			switch(choice){
 			 	case 1:
-			 			
+			 			system("pause");
+						system("cls");
 			 			createFile();
 			 			
 			  			break;
 				case 2:
+						system("pause");
+						system("cls");
 						accessFile();
-				
 						break;
 				case 3: 
-			 			break;
+			 			cout<<"Logging Out!"<<endl;
+						 break;
 				default:
 						break;
 			}
@@ -222,7 +235,5 @@ int main(){
 		system("cls");
 	}while(choice!=3);
 	
-	
-system("pause");
 return 0;
 }

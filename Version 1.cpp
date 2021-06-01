@@ -206,11 +206,11 @@ int main(){
 			 	case 1:
 			 			
 			 			createFile();
-			 			cin.ignore();
+			 			
 			  			break;
 				case 2:
 						accessFile();
-						cin.ignore();
+				
 						break;
 				case 3: 
 			 			break;

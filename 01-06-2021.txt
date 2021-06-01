@@ -1,7 +1,6 @@
 Tue Jun 01 18:29:14 2021
 Hello diary, well let's see if i can maintain this, i want to, afterall this is something i created. 
 
-
 Tue Jun 01 18:31:38 2021
 So just resolved another bug which stopped me from appending data, gotta update on github too xD
 
@@ -10,3 +9,6 @@ Well, fixed another bug, not exactly a bug but a false 'enter a valid choice' ou
 
 Tue Jun 01 18:37:29 2021
 So fixed few more bugs, it's already 1 and 1/2 hours overtime i've been debugging this, i gotta go workout too.
+
+Tue Jun 01 18:43:10 2021
+Okay i am finally going to workout! Toodles!!!!!

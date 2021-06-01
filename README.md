@@ -1,3 +1,3 @@
 # Notes-in-cpp
 
-This is a notes app using terminal in cpp.
+This is a notes app using concept of files in cpp.

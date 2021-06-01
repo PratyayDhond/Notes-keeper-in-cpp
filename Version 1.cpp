@@ -52,7 +52,7 @@ void createFile(){
 							fout.open(filename,ios::app);
 							string data;
 							cout<<"Enter data to be inputted in the diary : "<<endl;
-							cin.ignore();
+						//	cin.ignore();
 							getline(cin,data);
 							fout<<endl<<curTime()<<data<<endl;
 							
@@ -82,8 +82,6 @@ void createFile(){
 				default:
 						cout<<"Choose a valid Option : "<<endl;				
 			}
-			system("pause");
-			system("cls");	
 		}while(choice1!=3);
 			
 	}else{
@@ -92,13 +90,18 @@ void createFile(){
 		FOUT<<date<<endl;
 		FOUT.close();
 		
-		ofstream fout1(filename);						// Links file to object fout1;
+		ofstream fout1;
+		fout1.open(filename);						// Links file to object fout1;
 		if(fout1.good()){
 	//	cout<<"File"<<filename<<" created successfully."<<endl;											// Remainder Comment // //  Comment filename variable out out
 		string data;
 		cout<<"Enter data to be inputted in the diary : "<<endl;
+	//	getline(cin,data);
+		fflush(stdin);
 		getline(cin,data);
 		fout1<<curTime()<<data<<endl;
+		return;
+		//cin.ignore();
 	}
 	}
 }
@@ -186,6 +189,8 @@ int main(){
 		ofstream fin("AllRecord.txt");
 		fin.close();
 	}
+	
+	
 	int choice;
 	do{
 		
@@ -193,6 +198,7 @@ int main(){
 			<<"Press 2 to search previous notes"<<endl
 			<<"Press 3 to exit program"<<endl
 			<<"Choice : ";
+			fflush(stdin);
 		cin>>choice;
 			system("pause");
 			system("cls");	
@@ -200,20 +206,23 @@ int main(){
 			 	case 1:
 			 			
 			 			createFile();
-			 			break;
+			 			cin.ignore();
+			  			break;
 				case 2:
 						accessFile();
+						cin.ignore();
 						break;
 				case 3: 
-						
-						break;
+			 			break;
 				default:
 						break;
 			}
-			cin.ignore();
+
+		system("pause");
+		system("cls");
 	}while(choice!=3);
 	
 	
-
+system("pause");
 return 0;
 }
